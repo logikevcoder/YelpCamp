@@ -19,8 +19,10 @@ var commentRoutes    = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes      = require("./routes/index")
     
+// Dynamic database variables.. use a print below to find the path
+mongoose.connect(process.env.DATABASEURL);
 // var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp_v13"
-mongoose.connect("mongodb://kevin:Leoba1126@ds155695.mlab.com:55695/yelpcamp");
+// mongoose.connect("mongodb://kevin:Leoba1126@ds155695.mlab.com:55695/yelpcamp");
 
 
 app.use(bodyParser.urlencoded({extended: true}));
